@@ -1,0 +1,91 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+  background: #1f1f1f;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffc3;
+  transition: background 0.3s;
+}
+
+#display {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.buttons button, #modeToggle {
+  background: #00ffc3;
+  border: none;
+  padding: 10px 20px;
+  margin: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.buttons button:hover, #modeToggle:hover {
+  background: #00b896;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #00ffc3;
+}
+
+#laps {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#laps li {
+  background: #333;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.light-mode {
+  background: #f4f4f4;
+  color: #121212;
+}
+
+.light-mode .container {
+  background: #ffffff;
+  box-shadow: 0 0 10px #333;
+}
+
+.light-mode #laps li {
+  background: #ddd;
+}
+
+.light-mode button, .light-mode #modeToggle {
+  background: #333;
+  color: #f4f4f4;
+}
+
+.light-mode button:hover, .light-mode #modeToggle:hover {
+  background: #555;
+  box-shadow: 0 0 8px #333;
+}
+@keyframes rainbowGlow {
+  0% { box-shadow: 0 0 20px #ff0040; }
+  25% { box-shadow: 0 0 20px #ff8000; }
+  50% { box-shadow: 0 0 20px #00ffc3; }
+  75% { box-shadow: 0 0 20px #0080ff; }
+  100% { box-shadow: 0 0 20px #ff0040; }
+}
+
+.container.running {
+  animation: rainbowGlow 2s infinite alternate;
+}
+
